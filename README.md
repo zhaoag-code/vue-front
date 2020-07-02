@@ -1,5 +1,5 @@
 ## backend-front-vue
-- rbackend-front-vue基于vue、element-ui构建开发，实现后台管理前端功能
+- backend-front-vue基于vue、element-ui构建开发，实现后台管理前端功能
 - 前后端分离，通过token进行数据交互，可独立部署
 - 主题定制，通过scss变量统一一站式定制
 - 动态菜单，通过菜单管理统一管理访问路由
