@@ -10,6 +10,7 @@
       :data="dataList"
       row-key="menuId"
       border
+      v-loading="dataListLoading"
       style="width: 100%; ">
       <el-table-column
         prop="name"
@@ -122,7 +123,7 @@
       },
       // 删除
       deleteHandle (id) {
-        this.$confirm(`确定对[id=${id}]进行[删除]操作?`, '提示', {
+        this.$confirm(`确定对该菜单进行删除操作?`, '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
