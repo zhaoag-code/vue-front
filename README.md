@@ -4,3 +4,4 @@
 - 主题定制，通过scss变量统一一站式定制
 - 动态菜单，通过菜单管理统一管理访问路由
 - 发布时，可动态配置CDN静态资源／切换新旧版本
+- npm install --registry=https://registry.npm.taobao.org
