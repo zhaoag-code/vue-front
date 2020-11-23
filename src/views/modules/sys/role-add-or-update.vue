@@ -91,6 +91,12 @@
       dataFormSubmit () {
         this.$refs['dataForm'].validate((valid) => {
           if (valid) {
+            const loading = this.$loading({
+                      lock: true,
+                      text: '保存中',
+                      spinner: 'el-icon-loading',
+                      background: 'rgba(0, 0, 0, 0.7)'
+                    });
             this.$http({
               url: this.$http.adornUrl(`/sys/role/${!this.dataForm.id ? 'save' : 'update'}`),
               method: 'post',
@@ -101,6 +107,7 @@
                 'menuIdList': [].concat(this.$refs.menuListTree.getCheckedKeys(), [this.tempKey], this.$refs.menuListTree.getHalfCheckedKeys())
               })
             }).then(({data}) => {
+              loading.close();
               if (data && data.code === 0) {
                 this.$message({
                   message: '操作成功',
